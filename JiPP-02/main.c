@@ -15,14 +15,14 @@ void zad1() {
 	return;
 }
 
-int zad2() {
+void zad2() {
 	int l1, l2, l3;
 
 	printf("Podaj 3 liczby>");
 	scanf("%d %d %d", &l1, &l2, &l3);
 
 	if (l1 > l2) {
-		if (l1 > l3) printf(:"%d\n", l1); 
+		if (l1 > l3) printf("%d\n", l1); 
 	} else {
 		if (l2 > l3) printf("%d\n", l2);
 	}
@@ -139,6 +139,21 @@ void zad8() {
 }
 
 int main() {
+	printf("===========ZADANIE 1==========\n");
+	zad1();
+	printf("===========ZADANIE 2==========\n");
+	zad2();
+	printf("===========ZADANIE 3==========\n");
+	zad3();
+	printf("===========ZADANIE 4==========\n");
+	zad4();
+	printf("===========ZADANIE 5==========\n");
+	zad5();
+	printf("===========ZADANIE 6==========\n");
+	zad6();
+	printf("===========ZADANIE 7==========\n");
+	zad7();
+	printf("===========ZADANIE 8==========\n");
 	zad8();
 
 	return 0;
