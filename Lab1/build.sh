@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "$1" == "1" ]; then
+if [ "$1" == "10" ]; then
 	if [ "$2" == "g" ]; then
 		gcc -o ./bin/zad$1 ./src/zad$1.c -g -std=c99 -Wall -Wextra
 	else	
@@ -8,7 +8,7 @@ if [ "$1" == "1" ]; then
 	fi
 fi
 
-if [ "$1" == "2" ]; then
+if [ "$1" == "11" ]; then
 	if [ "$2" == "g" ]; then
 		gcc -o ./bin/zad$1 ./src/zad$1.c -g -std=c99 -Wall -Wextra
 	else
@@ -16,7 +16,7 @@ if [ "$1" == "2" ]; then
 	fi;
 fi
 
-if [ "$1" == "3" ]; then
+if [ "$1" == "12" ]; then
 	if [ "$2" == "g" ]; then
 		gcc -o ./bin/zad$1 ./src/zad$1.c -g -std=c99 -Wall -Wextra
 	else
