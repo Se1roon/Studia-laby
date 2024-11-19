@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <getopt.h>
 
 int main(int argc, char *argv[]) {
@@ -17,19 +18,29 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	int pos = -1;
+	int positions_size = 0;
+	int *positions = (int*)calloc(positions_size, sizeof(int));
+
 	int current_pos = 0;
 	char current_char;
 	while (scanf("%c", &current_char) != EOF) {
 		if (current_char == search_char) {
-			pos = current_pos;	
-			break;
+			positions = (int*)realloc(positions, ++positions_size * sizeof(int));
+			positions[positions_size - 1] = current_pos;
 		}
+
 		current_pos++;
 	}
 
-	if (pos < 0) printf("\n[%c] has not been found!\n");
-	else printf("\n[%c] has been found on position %d\n", current_char, pos);
+	if (!positions_size) printf("\n\n[%c] has not been found\n", search_char);
+	else {
+		printf("\n\n[%c] has been found on positions (including newline characters): ", search_char);
+		for (int i = 0; i < positions_size; i++) {
+			if (i + 1 == positions_size) printf("%d\n", positions[i]);
+			else printf("%d, ", positions[i]);
+		}
+	}
 
+	free(positions);
 	return 0;
 }
