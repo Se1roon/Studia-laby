@@ -3,8 +3,6 @@
 #include <string.h>
 #include <sys/stat.h>
 
-// TODO: Refactor this shit
-
 typedef struct student {
 	char* imie;
 	char* nazwisko;
