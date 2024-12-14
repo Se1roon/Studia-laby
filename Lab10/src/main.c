@@ -3,21 +3,22 @@
 
 #include "common.h"
 #include "linked_list.h"
+#include "d_linked_list.h"
 
 int main(void) {
 	char *filepath = "dane.txt";
 	FILE *fd = fopen(filepath, "r");
 
-	LL *list = ll_init(fd);
-	printf("BEFORE DEL\n");
-	ll_print(list);
+	D_LL *list = d_ll_init(fd);
+	d_ll_print(list);
 
-	ll_remove_tail(list);
+	d_ll_remove_tail(list);
 
-	printf("AFTER DEL\n");
-	ll_print(list);
+	printf("\n\n\n");
 
-	ll_clean(list);
+	d_ll_print(list);
+
+	d_ll_clean(list);
 	fclose(fd);
 	return 0;
 }

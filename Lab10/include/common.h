@@ -10,4 +10,14 @@ typedef struct stud {
 	struct stud *n;
 } STUDENT;
 
+typedef struct stud_d {
+	char *imie;
+	char *nazwisko;
+	int rok;
+	char *adres;
+	double stypendium;
+	struct stud_d *n;
+	struct stud_d *p;
+} STUDENT_D;
+
 #endif
